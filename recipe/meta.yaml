@@ -1,5 +1,5 @@
 {% set name = "hdf5plugin" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: dcdacb376ebd513b09f864934e4319988b7fbba78474c7dc013d8e2775de06a4
+  sha256: dce81b1cfc370eac8753580f3648526933ce54fa584efac6743633cb99348eaf
 
 build:
   number: 0
