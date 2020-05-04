@@ -1,17 +1,17 @@
 {% set name = "hdf5plugin" %}
-{% set version = "2.1.2" %}
+{% set version = "2.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 11da0aa6114ce20d98574f4c620dc1424b43e51ea5a219e2d203144f33c05193
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 484250ec6e23ca12dc6812cba901fcefcc21b1c5ee6abd35bc56c121181aecc5
 
 build:
   number: 0
-  skip: True  # [win and py<30]
+  skip: true  # [win and py<30]
 
 requirements:
   build:
@@ -31,11 +31,11 @@ test:
     - hdf5plugin
 
 about:
-  home: "https://github.com/silx-kit/hdf5plugin"
+  home: https://github.com/silx-kit/hdf5plugin
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "HDF5 Plugins for windows,MacOS and linux"
+  summary: HDF5 Plugins for windows,MacOS and linux
 
 extra:
   recipe-maintainers:
