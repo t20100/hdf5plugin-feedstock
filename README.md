@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hdf5plugin-feedstock/blob/master/LICENSE.txt)
 
-Summary: HDF5 Plugins for windows,MacOS and linux
+Summary: HDF5 Plugins for windows, MacOS, and linux
 
 Current build status
 ====================
