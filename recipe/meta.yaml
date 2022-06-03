@@ -29,6 +29,7 @@ requirements:
     - python
     - setuptools
     - hdf5
+    - py-cpuinfo ==8.0.0
   run:
     - h5py
     - python
