@@ -1,5 +1,5 @@
 {% set name = "hdf5plugin" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58da2df01698be96dc4db6ec1639854b3425aae14bb8a0d6d9e1f9dbbb955c5e
+  sha256: b185fea987f582e3a51e7994cc07415664ac8be54dbad863d9f65a4fb5bd635c
 
 build:
-  number: 1
+  number: 0
   script_env:
     - HDF5PLUGIN_SSE2=True  # [x86 or ppc64le]
     - HDF5PLUGIN_SSE2=False  # [not x86 and not ppc64le]
