@@ -1,11 +1,11 @@
-About hdf5plugin
-================
+About hdf5plugin-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hdf5plugin-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/silx-kit/hdf5plugin
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hdf5plugin-feedstock/blob/main/LICENSE.txt)
 
 Summary: HDF5 Plugins for windows, MacOS, and linux
 
