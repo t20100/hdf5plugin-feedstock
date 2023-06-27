@@ -10,7 +10,7 @@ source:
   sha256: 40838a6f39a84d2b7f3b9c3b88a7a89d0df99851756f5481ea11a05b07f60622
 
 build:
-  number: 0
+  number: 1
   script_env:
     - HDF5PLUGIN_SSE2=True  # [x86]
     - HDF5PLUGIN_SSE2=False  # [not x86]
