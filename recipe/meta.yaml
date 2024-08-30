@@ -14,6 +14,7 @@ build:
   script_env:
     - HDF5PLUGIN_SSE2=True  # [x86]
     - HDF5PLUGIN_SSE2=False  # [not x86]
+    - HDF5PLUGIN_SSSE3=False
     - HDF5PLUGIN_NATIVE=False
     - HDF5PLUGIN_AVX2=False
     - HDF5PLUGIN_AVX512=False
@@ -32,9 +33,9 @@ requirements:
     - python
     - setuptools
     - hdf5
-    - py-cpuinfo ==8.0.0
+    - py-cpuinfo ==9.0.0
   run:
-    - h5py
+    - h5py >=3.0.0
     - python
 
 test:
