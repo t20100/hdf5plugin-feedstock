@@ -1,5 +1,5 @@
 {% set name = "hdf5plugin" %}
-{% set version = "4.4.0" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4142f54170843782eda7456b8f47d15910879ceb2608025aebf9464b7163913a
+  sha256: 3bcc5c4f523953fe020a220c7b1b307c62066e39fdbdcd904fa2268db80e9dbb
 
 build:
   number: 0
   script_env:
     - HDF5PLUGIN_SSE2=True  # [x86]
     - HDF5PLUGIN_SSE2=False  # [not x86]
+    - HDF5PLUGIN_SSSE3=False
     - HDF5PLUGIN_NATIVE=False
     - HDF5PLUGIN_AVX2=False
     - HDF5PLUGIN_AVX512=False
@@ -25,15 +26,16 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler("c") }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - pip
     - python
     - setuptools
     - hdf5
-    - py-cpuinfo ==8.0.0
+    - py-cpuinfo ==9.0.0
   run:
-    - h5py
+    - h5py >=3.0.0
     - python
 
 test:
