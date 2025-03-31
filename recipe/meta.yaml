@@ -10,7 +10,7 @@ source:
   sha256: cf78f1426b5868128b9ec6c498b70d6734e1dc8007a8ed1e7282954ab421b3fa
 
 build:
-  number: 0
+  number: 1
   script_env:
     - HDF5PLUGIN_SSE2=True  # [x86]
     - HDF5PLUGIN_SSE2=False  # [not x86]
@@ -20,6 +20,7 @@ build:
     - HDF5PLUGIN_AVX512=False
     - HDF5PLUGIN_BMI2=False
     - HDF5PLUGIN_OPENMP=False
+    - HDF5PLUGIN_SYSTEM_LIBRARIES=blosc,blosc2,lz4,zlib,zstd
 
 requirements:
   build:
@@ -34,6 +35,11 @@ requirements:
     - setuptools
     - hdf5
     - py-cpuinfo ==9.0.0
+    - blosc
+    - c-blosc2
+    - lz4-c
+    - zlib
+    - zstd
   run:
     - h5py >=3.0.0
     - python
