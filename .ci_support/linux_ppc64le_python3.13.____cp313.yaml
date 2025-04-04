@@ -1,3 +1,5 @@
+c_blosc2:
+- '2.17'
 c_compiler:
 - gcc
 c_compiler_version:
@@ -20,6 +22,8 @@ docker_image:
 - quay.io/condaforge/linux-anvil-ppc64le:alma9
 hdf5:
 - 1.14.3
+lz4_c:
+- '1.10'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -31,3 +35,7 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+zlib:
+- '1'
+zstd:
+- '1.5'
