@@ -10,9 +10,10 @@ source:
   sha256: 847ed9e96b451367a110f0ba64a3b260d38d64bbf3f25751858d3b56e094cfe0
   patches:
     - 0002-bypass-pkgconfig-for-bzip2.patch
+    - 0003-link-libhdf5-on-unix-for-hdf5-2.patch
 
 build:
-  number: 4
+  number: 5
   script_env:
     - HDF5PLUGIN_SSE2=True  # [x86]
     - HDF5PLUGIN_SSE2=False  # [not x86]
