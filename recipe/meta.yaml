@@ -1,5 +1,5 @@
 {% set name = "hdf5plugin" %}
-{% set version = "6.0.0" %}
+{% set version = "7.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 847ed9e96b451367a110f0ba64a3b260d38d64bbf3f25751858d3b56e094cfe0
+  sha256: e6e6b1f8b0c4d2ca87e616ddc31d08330b36207e466357040f95269e5e0401c8
   patches:
     - 0002-bypass-pkgconfig-for-bzip2.patch
     # https://github.com/silx-kit/hdf5plugin/pull/380
     - 0003-link-libhdf5-on-unix-for-hdf5-2.patch
 
 build:
-  number: 5
+  number: 0
   script_env:
     - HDF5PLUGIN_SSE2=True  # [x86]
     - HDF5PLUGIN_SSE2=False  # [not x86]
