@@ -6,7 +6,7 @@ index 92eb3d5e0..48efe01a8 100644
  
  @lru_cache()
  def _get_clib_config_from_pkgconfig(libname):
-+    if libname == "bz2":
++    if libname == "bzip2":
 +        return {
 +            "include_dirs": [],
 +            "extra_link_args": [],
