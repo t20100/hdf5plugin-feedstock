@@ -47,6 +47,7 @@ requirements:
     - zstd
   run:
     - h5py >=3.0.0
+    - packaging
     - python
 
 test:
