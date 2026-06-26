@@ -10,8 +10,6 @@ source:
   sha256: e6e6b1f8b0c4d2ca87e616ddc31d08330b36207e466357040f95269e5e0401c8
   patches:
     - 0002-bypass-pkgconfig-for-bzip2.patch
-    # https://github.com/silx-kit/hdf5plugin/pull/380
-    - 0003-link-libhdf5-on-unix-for-hdf5-2.patch
 
 build:
   number: 0
