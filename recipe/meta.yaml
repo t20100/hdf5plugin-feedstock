@@ -1,18 +1,18 @@
 {% set name = "hdf5plugin" %}
-{% set version = "7.0.0" %}
+{% set version = "7.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e6e6b1f8b0c4d2ca87e616ddc31d08330b36207e466357040f95269e5e0401c8
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: dc4aa9576bf5770d773be9309a060ccf2f0ce2f0031f2b369f566d2662ec2fb3
   patches:
     - 0002-bypass-pkgconfig-for-bzip2.patch
 
 build:
-  number: 2
+  number: 0
   script_env:
     - HDF5PLUGIN_SSE2=True  # [x86]
     - HDF5PLUGIN_SSE2=False  # [not x86]
@@ -22,7 +22,7 @@ build:
     - HDF5PLUGIN_AVX512=False
     - HDF5PLUGIN_BMI2=False
     - HDF5PLUGIN_OPENMP=False
-    - HDF5PLUGIN_SYSTEM_LIBRARIES=blosc,blosc2,bzip2,lz4,zlib,zstd
+    - HDF5PLUGIN_SYSTEM_LIBRARIES=blosc,blosc2,bzip2,lz4,openjph,zlib,zstd
 
 requirements:
   build:
@@ -43,6 +43,7 @@ requirements:
     - bzip2
     - c-blosc2
     - lz4-c
+    - openjph >=0.31.0
     - zlib
     - zstd
   run:
