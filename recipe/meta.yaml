@@ -22,7 +22,7 @@ build:
     - HDF5PLUGIN_AVX512=False
     - HDF5PLUGIN_BMI2=False
     - HDF5PLUGIN_OPENMP=False
-    - HDF5PLUGIN_SYSTEM_LIBRARIES=blosc,blosc2,bzip2,lz4,zlib,zstd
+    - HDF5PLUGIN_SYSTEM_LIBRARIES=blosc,blosc2,bzip2,lz4,openjph,zlib,zstd
 
 requirements:
   build:
@@ -43,6 +43,7 @@ requirements:
     - bzip2
     - c-blosc2
     - lz4-c
+    - openjph >=0.31.0
     - zlib
     - zstd
   run:
